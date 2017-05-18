@@ -1,9 +1,9 @@
 import { createStore, applyMiddleware } from "redux";
 import reducers from "../reducers/reducers";
-import promise from "redux-promise";
+import thunk from "redux-thunk";
 
-const enhancer = applyMiddleware(promise);
+const enhancer = applyMiddleware(thunk);
 
-export default function configureStore(initialState) {
+export default function configureStore(initialState = {}) {
   return createStore(reducers, initialState, enhancer);
 }

@@ -46,8 +46,9 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-redux": "^5.0.5",
+    "react-table": "^6.0.3",
     "redux": "^3.6.0",
-    "redux-promise": "^0.5.3"
+    "redux-thunk": "^2.2.0"
   },
   "scripts": {
     "start": "node scripts/start.js",
