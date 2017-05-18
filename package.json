@@ -44,7 +44,10 @@
   },
   "dependencies": {
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.5",
+    "redux": "^3.6.0",
+    "redux-promise": "^0.5.3"
   },
   "scripts": {
     "start": "node scripts/start.js",
