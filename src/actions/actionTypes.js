@@ -1,0 +1,3 @@
+export const FETCH_DATA = "GET_POSTS";
+export const FETCH_DATA_SUCCESS = "GET_POSTS_SUCCESS";
+export const FETCH_DATA_FAILURE = "GET_POSTS_FAILURE";
