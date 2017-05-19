@@ -1,4 +1,8 @@
 import React, { Component } from "react";
+import Table from "./table";
+import 'react-table/react-table.css'
+
+
 class Data extends Component {
   componentWillMount() {
     this.props.fetchData();
@@ -10,7 +14,11 @@ class Data extends Component {
       loading = true;
     }
     if (error) return <p> {error}</p>;
-    return loading ? <span> loading</span> : { data };
+    if (loading) {
+      return <span> loading</span>;
+    } else {
+      return <Table data={data.features} />;
+    }
   }
 }
 
