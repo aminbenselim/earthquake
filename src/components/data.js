@@ -1,11 +1,16 @@
 import React, { Component } from "react";
 class Data extends Component {
-  componentDidMount() {
+  componentWillMount() {
     this.props.fetchData();
   }
+
   render() {
-    console.log(this.props.data);
-    return <div />;
+    let { data, error, loading } = this.props;
+    if (loading == null) {
+      loading = true;
+    }
+    if (error) return <p> {error}</p>;
+    return loading ? <span> loading</span> : { data };
   }
 }
 

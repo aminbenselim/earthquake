@@ -2,9 +2,12 @@ import { connect } from "react-redux";
 import { fetchData } from "../actions/actionCreators";
 import Data from "../components/data";
 
-const mapStateToProps = state => {
+const mapStateToProps = (state = { data: [], error: null, loading: false }) => {
+  const { data, error, loading } = state;
   return {
-    data: state.data
+    data,
+    error,
+    loading
   };
 };
 
