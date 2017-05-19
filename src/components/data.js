@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Table from "./table";
-import 'react-table/react-table.css'
+import "react-table/react-table.css";
 
+import SimpleMap from "./map";
 
 class Data extends Component {
   componentWillMount() {
@@ -13,11 +14,16 @@ class Data extends Component {
     if (loading == null) {
       loading = true;
     }
-    if (error) return <p> {error}</p>;
+    if (error) return <p> {error.message}</p>;
     if (loading) {
       return <span> loading</span>;
     } else {
-      return <Table data={data.features} />;
+      return (
+        <div>
+          <SimpleMap data={data} />
+          <Table data={data.features} />
+        </div>
+      );
     }
   }
 }

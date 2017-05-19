@@ -6,7 +6,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <h2>Welcome to Earthquake Dashboard</h2>
+          <h2>Earthquake Dashboard</h2>
         </div>
         <Data />
       </div>

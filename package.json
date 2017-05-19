@@ -43,8 +43,10 @@
     "whatwg-fetch": "2.0.2"
   },
   "dependencies": {
+    "leaflet": "^1.0.3",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "react-leaflet": "^1.1.6",
     "react-redux": "^5.0.5",
     "react-table": "^6.0.3",
     "redux": "^3.6.0",
