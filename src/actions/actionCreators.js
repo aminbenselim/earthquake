@@ -1,6 +1,6 @@
 import * as actionTypes from "./actionTypes";
 
-//the callback function used in the usgs website ;
+//helper function to add script tag to body with uri as source
 function jsonP(uri) {
   return new Promise((resolve, reject) => {
     let object = {};
@@ -19,7 +19,7 @@ function jsonP(uri) {
 
 export function fetchData() {
   return function(dispatch) {
-    dispatch({ type: actionTypes.FETCH_DATA });
+    dispatch(fetchDataStart());
     return jsonP(
       "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojsonp"
     )
@@ -33,17 +33,22 @@ export function fetchData() {
       });
   };
 }
+export const fetchDataStart = data => {
+  return {
+    type: actionTypes.FETCH_DATA_START
+  };
+};
 
-function fetchDataSuccess(data) {
+export const fetchDataSuccess = data => {
   return {
     type: actionTypes.FETCH_DATA_SUCCESS,
     payload: data
   };
-}
+};
 
-function fetchDataFailure(error) {
+export const fetchDataFailure = error => {
   return {
     type: actionTypes.FETCH_DATA_FAILURE,
     payload: error
   };
-}
+};
