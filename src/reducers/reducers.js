@@ -2,9 +2,9 @@ import * as actionTypes from "../actions/actionTypes";
 
 const INITIAL_STATE = { data: [], error: null, loading: false };
 
-const data = (state = INITIAL_STATE, action) => {
+const dataReducers = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case actionTypes.FETCH_DATA:
+    case actionTypes.FETCH_DATA_START:
       return { data: [], error: null, loading: true };
 
     case actionTypes.FETCH_DATA_SUCCESS:
@@ -22,4 +22,4 @@ const data = (state = INITIAL_STATE, action) => {
   }
 };
 
-export default data;
+export default dataReducers;
