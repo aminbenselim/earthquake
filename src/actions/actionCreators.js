@@ -17,22 +17,6 @@ function jsonP(uri) {
   });
 }
 
-export function fetchData() {
-  return function(dispatch) {
-    dispatch(fetchDataStart());
-    return jsonP(
-      "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojsonp"
-    )
-      .then(data => {
-        dispatch(fetchDataSuccess(data));
-      })
-      .catch(error => {
-        dispatch(fetchDataFailure(error));
-
-        //  throw error;
-      });
-  };
-}
 export const fetchDataStart = data => {
   return {
     type: actionTypes.FETCH_DATA_START
@@ -52,3 +36,21 @@ export const fetchDataFailure = error => {
     payload: error
   };
 };
+
+//thunk used to fetch data (function that returns a function)
+export function fetchData() {
+  return function(dispatch) {
+    dispatch(fetchDataStart());
+    return jsonP(
+      "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojsonp"
+    )
+      .then(data => {
+        dispatch(fetchDataSuccess(data));
+      })
+      .catch(error => {
+        dispatch(fetchDataFailure(error));
+
+        //  throw error;
+      });
+  };
+}
