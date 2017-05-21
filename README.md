@@ -9,3 +9,21 @@ Dashboard to diplay and monitor earthquake activity as provided by the [USGS Ear
 * [React-leaflet](https://github.com/PaulLeCam/react-leaflet) - Map component
 * [React-table](https://github.com/tannerlinsley/react-table) 
  
+ ## Deployment
+
+ to deploy this project locally, clone it on your local machine
+
+> git clone https://github.com/amine-benselim/earthquake.git
+
+    
+> cd earthquake
+
+> yarn run start
+
+to run test suits
+
+> yarn run test
+
+to see test coverage
+    
+> yarn run coverage
