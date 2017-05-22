@@ -1,25 +1,13 @@
 language: node_js
 node_js:
   - "node"
-<<<<<<< HEAD
 
 before_deploy:
   - yarn build 
-=======
-cache:
-  yarn: true
-  directories:
-    - node_modules
->>>>>>> c700f7ccc1626eacc60eab338b0a0ca23ee959e3
 
 deploy:
   provider: surge
   project: ./build/
   domain: dashquake.surge.sh 
-<<<<<<< HEAD
   skip_cleanup: true
-=======
-  skip_cleanup: true
-    on:
-      branch: master
->>>>>>> c700f7ccc1626eacc60eab338b0a0ca23ee959e3
+ 
