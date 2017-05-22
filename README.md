@@ -1,4 +1,5 @@
-# Earthquake Dashboard 
+# Earthquake Dashboard [![Build Status](https://travis-ci.org/amine-benselim/earthquake.svg?branch=master)](https://travis-ci.org/amine-benselim/earthquake)
+
 
 Dashboard to diplay and monitor earthquake activity as provided by the [USGS Earthquake Data](http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojsonp)
 
