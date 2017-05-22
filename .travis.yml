@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - "node"
+cache:
+  yarn: true
+  directories:
+    - node_modules
+
+deploy:
+  provider: surge
+  project: ./build/
+  domain: dashquake.surge.sh 
+  skip_cleanup: true
+    on:
+      branch: master
